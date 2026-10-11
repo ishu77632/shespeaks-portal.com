@@ -1,0 +1,1917 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d2441" />
+  <meta
+    name="description"
+    content="SheSpeaks is a private student concern reporting and campus support portal created by Sajid."
+  />
+
+  <title>SheSpeaks | Campus Support Portal</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">
+    Skip to main content
+  </a>
+
+  <header class="site-header">
+    <button
+      class="brand"
+      type="button"
+      data-route="home"
+      aria-label="Return to SheSpeaks home"
+    >
+      <span class="brand-seal" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path
+            d="M24 3 42 10v12c0 11-7.2 19.4-18 23C13.2 41.4 6 33 6 22V10L24 3Z"
+          />
+
+          <path
+            class="seal-line"
+            d="M15 18h18M17 24h14M20 30h8"
+          />
+        </svg>
+      </span>
+
+      <span>
+        <b>SheSpeaks</b>
+        <small>Campus Safety & Support</small>
+      </span>
+    </button>
+
+    <nav class="main-nav" aria-label="Primary navigation">
+      <button type="button" data-route="home">
+        Home
+      </button>
+
+      <button type="button" data-route="student">
+        Student Portal
+      </button>
+
+      <button type="button" data-route="admin-login">
+        Faculty Portal
+      </button>
+
+      <button type="button" data-route="about">
+        About Me
+      </button>
+
+      <button type="button" data-route="feedback">
+        Feedback
+      </button>
+    </nav>
+
+    <span class="project-pill">
+      <i></i>
+      Academic Project
+    </span>
+  </header>
+
+  <div class="safety-strip" role="note">
+    <span class="safety-icon">i</span>
+
+    <span>
+      <strong>Privacy notice:</strong>
+      Information entered here stays in this browser and is not
+      sent to BCE or any institution.
+    </span>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- LOGIN DASHBOARD -->
+
+    <section
+      class="view is-active"
+      id="view-login"
+      aria-labelledby="accessTitle"
+    >
+      <div class="access-dashboard">
+        <div class="access-heading">
+          <span class="section-kicker">
+            SheSpeaks secure access
+          </span>
+
+          <h1 id="accessTitle">
+            Choose your portal
+          </h1>
+
+          <p>
+            Students and authorized faculty members have
+            separate portal accounts.
+          </p>
+        </div>
+
+        <div class="access-grid">
+
+          <!-- STUDENT LOGIN -->
+
+          <form
+            class="access-card student-access"
+            id="studentLoginForm"
+          >
+            <div class="access-icon">S</div>
+
+            <span class="access-label">
+              Student access
+            </span>
+
+            <h2>Student login</h2>
+
+            <p>
+              Submit a concern, receive a case code and track
+              its status.
+            </p>
+
+            <div class="access-credentials">
+              <span>Login credentials</span>
+
+              <code>sajid@gmail.com</code>
+              <code>sajid123</code>
+
+              <button
+                type="button"
+                id="fillStudentLogin"
+              >
+                Fill details
+              </button>
+            </div>
+
+            <div class="field-group">
+              <label for="studentEmail">
+                Student email
+              </label>
+
+              <input
+                id="studentEmail"
+                type="email"
+                autocomplete="username"
+                placeholder="sajid@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="studentPassword">
+                Password
+              </label>
+
+              <div class="password-field">
+                <input
+                  id="studentPassword"
+                  type="password"
+                  autocomplete="current-password"
+                  placeholder="Enter password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  id="toggleStudentPassword"
+                >
+                  Show
+                </button>
+              </div>
+            </div>
+
+            <small
+              class="field-error access-error"
+              id="studentLoginError"
+            ></small>
+
+            <button
+              class="btn btn-primary full"
+              type="submit"
+            >
+              Open student portal
+              <span>→</span>
+            </button>
+          </form>
+
+          <!-- FACULTY LOGIN -->
+
+          <form
+            class="access-card faculty-access"
+            id="facultyLoginForm"
+          >
+            <div class="access-icon">F</div>
+
+            <span class="access-label">
+              Faculty access
+            </span>
+
+            <h2>Faculty login</h2>
+
+            <p>
+              Review concerns, reply to students and update
+              case status.
+            </p>
+
+            <div class="access-credentials">
+              <span>Login credentials</span>
+
+              <code>principal@gmail.com</code>
+              <code>principal123</code>
+
+              <button
+                type="button"
+                id="fillFacultyLogin"
+              >
+                Fill details
+              </button>
+            </div>
+
+            <div class="field-group">
+              <label for="facultyEmail">
+                Faculty email
+              </label>
+
+              <input
+                id="facultyEmail"
+                type="email"
+                autocomplete="username"
+                placeholder="principal@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="facultyPassword">
+                Password
+              </label>
+
+              <div class="password-field">
+                <input
+                  id="facultyPassword"
+                  type="password"
+                  autocomplete="current-password"
+                  placeholder="Enter password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  id="toggleFacultyPassword"
+                >
+                  Show
+                </button>
+              </div>
+            </div>
+
+            <small
+              class="field-error access-error"
+              id="facultyLoginError"
+            ></small>
+
+            <button
+              class="btn btn-primary full"
+              type="submit"
+            >
+              Open faculty dashboard
+              <span>→</span>
+            </button>
+          </form>
+        </div>
+
+        <p class="access-note">
+          Academic frontend project — information is stored
+          locally in this browser.
+        </p>
+      </div>
+    </section>
+
+    <!-- HOME PAGE -->
+
+    <section
+      class="view"
+      id="view-home"
+      aria-labelledby="homeTitle"
+    >
+      <div class="home-hero">
+        <div
+          class="campus-pattern"
+          aria-hidden="true"
+        ></div>
+
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span></span>
+            Student wellbeing initiative
+          </div>
+
+          <h1 id="homeTitle">
+            A safer way to
+            <br />
+
+            <em>speak and be heard.</em>
+          </h1>
+
+          <p>
+            SheSpeaks is a privacy-first academic project that
+            gives students a clear path to share a concern,
+            receive a case code and follow progress—while
+            authorized faculty can review and respond responsibly.
+          </p>
+
+          <div class="hero-actions">
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-route="student"
+            >
+              Enter Student Portal
+
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="m7 4 6 6-6 6" />
+              </svg>
+            </button>
+
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-route="admin-login"
+            >
+              Faculty Login
+            </button>
+          </div>
+
+          <div class="hero-trust">
+            <span>
+              <b>01</b>
+              Anonymous case code
+            </span>
+
+            <span>
+              <b>02</b>
+              Private follow-up
+            </span>
+
+            <span>
+              <b>03</b>
+              Responsible review
+            </span>
+          </div>
+        </div>
+
+        <div
+          class="hero-console"
+          aria-label="Preview of the SheSpeaks portal"
+        >
+          <div class="console-top">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <small>PORTAL PREVIEW</small>
+          </div>
+
+          <div class="console-body">
+            <div class="console-mark">
+              <span>SS</span>
+            </div>
+
+            <p>Welcome to SheSpeaks</p>
+
+            <h2>
+              How can we support you today?
+            </h2>
+
+            <div class="console-options">
+              <div>
+                <span class="mini-icon">＋</span>
+                <b>Share a concern</b>
+                <small>Receive a private case code</small>
+              </div>
+
+              <div>
+                <span class="mini-icon">⌕</span>
+                <b>Track a case</b>
+                <small>View status and messages</small>
+              </div>
+            </div>
+
+            <div class="console-footer">
+              <span class="pulse-dot"></span>
+              Private browser-based environment
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-section portal-choice">
+        <div class="section-intro">
+          <span class="section-kicker">
+            Choose your portal
+          </span>
+
+          <h2>
+            One system, two clear experiences.
+          </h2>
+
+          <p>
+            Explore the full journey from student submission
+            to faculty review and safe follow-up.
+          </p>
+        </div>
+
+        <div class="role-grid">
+          <article class="role-card student-card">
+            <div class="role-number">01</div>
+
+            <div class="role-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M16 4 3 11l13 7 13-7-13-7Z" />
+                <path d="M8 15v7c5 4 11 4 16 0v-7M28 12v8" />
+              </svg>
+            </div>
+
+            <span>For students</span>
+
+            <h3>Submit and track safely</h3>
+
+            <p>
+              Explain a concern, receive a unique case code,
+              check status and continue a private message thread.
+            </p>
+
+            <ul>
+              <li>No name required</li>
+              <li>Instant case code</li>
+              <li>Status timeline</li>
+            </ul>
+
+            <button
+              class="text-link"
+              type="button"
+              data-route="student"
+            >
+              Open Student Portal
+              <span>→</span>
+            </button>
+          </article>
+
+          <article class="role-card staff-card">
+            <div class="role-number">02</div>
+
+            <div class="role-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <rect
+                  x="5"
+                  y="4"
+                  width="22"
+                  height="25"
+                  rx="3"
+                />
+
+                <path d="M11 11h10M11 16h10M11 21h6" />
+              </svg>
+            </div>
+
+            <span>For authorized faculty</span>
+
+            <h3>Review and respond responsibly</h3>
+
+            <p>
+              Use the faculty dashboard to view open concerns,
+              reply to students, update progress and mark
+              cases resolved.
+            </p>
+
+            <ul>
+              <li>Concern overview</li>
+              <li>Two-way private chat</li>
+              <li>Open and resolved queues</li>
+            </ul>
+
+            <button
+              class="text-link"
+              type="button"
+              data-route="admin-login"
+            >
+              Open Faculty Portal
+              <span>→</span>
+            </button>
+          </article>
+        </div>
+      </div>
+
+      <div class="home-section journey-section">
+        <div class="section-intro compact">
+          <span class="section-kicker">
+            Student journey
+          </span>
+
+          <h2>
+            From concern to support in five steps.
+          </h2>
+        </div>
+
+        <div class="journey-line">
+          <div class="journey-item">
+            <b>1</b>
+            <span>Open portal</span>
+            <small>Read privacy guidance</small>
+          </div>
+
+          <div class="journey-item">
+            <b>2</b>
+            <span>Describe concern</span>
+            <small>Add the important details</small>
+          </div>
+
+          <div class="journey-item">
+            <b>3</b>
+            <span>Receive code</span>
+            <small>Keep it for follow-up</small>
+          </div>
+
+          <div class="journey-item">
+            <b>4</b>
+            <span>Faculty review</span>
+            <small>Status and response</small>
+          </div>
+
+          <div class="journey-item">
+            <b>5</b>
+            <span>Track progress</span>
+            <small>Continue the conversation</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-section principles-section">
+        <div class="principles-panel">
+          <div>
+            <span class="section-kicker light">
+              Designed for academic environments
+            </span>
+
+            <h2>
+              Privacy explained.
+              <br />
+              Access limited.
+              <br />
+              Support made clearer.
+            </h2>
+          </div>
+
+          <div class="principle-list">
+            <div>
+              <b>Minimum information</b>
+
+              <p>
+                The portal asks only for details needed to
+                understand and review a concern.
+              </p>
+            </div>
+
+            <div>
+              <b>No public report feed</b>
+
+              <p>
+                Concerns are represented inside a restricted
+                faculty dashboard, never a public wall.
+              </p>
+            </div>
+
+            <div>
+              <b>Privacy by design</b>
+
+              <p>
+                This frontend project keeps information in the
+                current browser and does not send it online.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREATOR CREDIT -->
+
+      <div class="home-section project-credit">
+        <div>
+          <span class="section-kicker">
+            Website creator
+          </span>
+
+          <h2>Made by Sajid</h2>
+
+          <p>
+            Civil Engineering · Bakhtiyarpur College of
+            Engineering (BCE)
+          </p>
+        </div>
+
+        <div class="credit-actions">
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-route="about"
+          >
+            About Me
+          </button>
+
+          <button
+            class="btn btn-light"
+            type="button"
+            data-route="feedback"
+          >
+            Give Feedback
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+
+    <section
+      class="view"
+      id="view-about"
+      aria-labelledby="aboutTitle"
+    >
+      <div class="info-page">
+        <button
+          class="back-link dark"
+          type="button"
+          data-route="home"
+        >
+          ← Back to home
+        </button>
+
+        <div class="about-layout">
+          <div class="creator-card">
+            <div class="creator-avatar">
+              SJ
+            </div>
+
+            <span>Website creator</span>
+
+            <h2>Sajid</h2>
+
+            <p>Civil Engineering Student</p>
+          </div>
+
+          <div class="creator-details">
+            <span class="section-kicker">
+              About Me
+            </span>
+
+            <h1 id="aboutTitle">
+              Made by Sajid
+            </h1>
+
+            <p>
+              I created SheSpeaks as an academic website project
+              to present a clear and responsible student concern
+              reporting system for a college environment.
+            </p>
+
+            <div class="creator-facts">
+              <div>
+                <small>Creator</small>
+                <b>Sajid</b>
+              </div>
+
+              <div>
+                <small>Department</small>
+                <b>Civil Engineering</b>
+              </div>
+
+              <div>
+                <small>College</small>
+
+                <b>
+                  Bakhtiyarpur College of Engineering
+                </b>
+              </div>
+
+              <div>
+                <small>College short name</small>
+                <b>BCE Bakhtiyarpur</b>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-route="feedback"
+            >
+              Share your feedback
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+
+    <section
+      class="view"
+      id="view-feedback"
+      aria-labelledby="feedbackTitle"
+    >
+      <div class="info-page">
+        <button
+          class="back-link dark"
+          type="button"
+          data-route="home"
+        >
+          ← Back to home
+        </button>
+
+        <div class="feedback-layout">
+          <div class="feedback-copy">
+            <span class="section-kicker">
+              Feedback
+            </span>
+
+            <h1 id="feedbackTitle">
+              Help improve SheSpeaks.
+            </h1>
+
+            <p>
+              Share your opinion about the design, features and
+              ease of use. Your feedback will be saved only in
+              this browser.
+            </p>
+
+            <div class="feedback-point">
+              <b>01</b>
+
+              <span>
+                <strong>Design</strong>
+                <small>Tell us how the website looks.</small>
+              </span>
+            </div>
+
+            <div class="feedback-point">
+              <b>02</b>
+
+              <span>
+                <strong>Features</strong>
+                <small>Suggest a useful portal feature.</small>
+              </span>
+            </div>
+
+            <div class="feedback-point">
+              <b>03</b>
+
+              <span>
+                <strong>Experience</strong>
+                <small>Tell us what could be easier.</small>
+              </span>
+            </div>
+          </div>
+
+          <form
+            class="feedback-card"
+            id="feedbackForm"
+          >
+            <h2>Send feedback</h2>
+
+            <p>
+              All fields marked with * are required.
+            </p>
+
+            <div class="field-group">
+              <label for="feedbackName">
+                Your name
+                <span>*</span>
+              </label>
+
+              <input
+                id="feedbackName"
+                type="text"
+                maxlength="60"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="two-fields">
+              <div class="field-group">
+                <label for="feedbackRole">
+                  You are a
+                </label>
+
+                <select id="feedbackRole">
+                  <option>Student</option>
+                  <option>Faculty member</option>
+                  <option>Teacher</option>
+                  <option>Visitor</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="feedbackRating">
+                  Rating
+                </label>
+
+                <select id="feedbackRating">
+                  <option value="5">
+                    5 — Excellent
+                  </option>
+
+                  <option value="4">
+                    4 — Very good
+                  </option>
+
+                  <option value="3">
+                    3 — Good
+                  </option>
+
+                  <option value="2">
+                    2 — Fair
+                  </option>
+
+                  <option value="1">
+                    1 — Needs improvement
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="feedbackMessage">
+                Your feedback
+                <span>*</span>
+              </label>
+
+              <textarea
+                id="feedbackMessage"
+                rows="6"
+                maxlength="600"
+                placeholder="Write your feedback here..."
+                required
+              ></textarea>
+            </div>
+
+            <button
+              class="btn btn-primary full"
+              type="submit"
+            >
+              Submit feedback
+              <span>→</span>
+            </button>
+
+            <div
+              class="feedback-success"
+              id="feedbackSuccess"
+              hidden
+            >
+              ✓ Thank you! Your feedback has been saved.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDENT PORTAL -->
+
+    <section
+      class="view"
+      id="view-student"
+      aria-labelledby="studentTitle"
+    >
+      <div class="portal-shell student-shell">
+        <div class="portal-banner">
+          <button
+            class="back-link"
+            type="button"
+            id="studentLogoutBtn"
+          >
+            ← Sign out
+          </button>
+
+          <div class="portal-heading">
+            <div
+              class="portal-heading-icon student-bg"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32">
+                <path d="M16 4 3 11l13 7 13-7-13-7Z" />
+                <path d="M8 15v7c5 4 11 4 16 0v-7M28 12v8" />
+              </svg>
+            </div>
+
+            <div>
+              <span>Student access</span>
+
+              <h1 id="studentTitle">
+                Student Support Portal
+              </h1>
+
+              <p>
+                Share a concern or check an existing case.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-workspace">
+          <div class="student-start" id="studentStart">
+            <div class="urgent-notice">
+              <span>!</span>
+
+              <div>
+                <b>Are you in immediate danger?</b>
+
+                <p>
+                  Contact a trusted adult or appropriate local
+                  emergency support now. Do not wait for an
+                  online response.
+                </p>
+              </div>
+            </div>
+
+            <div class="student-action-grid">
+              <button
+                class="action-card"
+                type="button"
+                id="startReportBtn"
+              >
+                <span class="action-icon purple">＋</span>
+                <small>New submission</small>
+                <b>Share a concern</b>
+
+                <p>
+                  Describe the situation and receive a unique
+                  case code.
+                </p>
+
+                <i>Begin secure form →</i>
+              </button>
+
+              <button
+                class="action-card"
+                type="button"
+                id="startTrackBtn"
+              >
+                <span class="action-icon teal">⌕</span>
+                <small>Existing case</small>
+                <b>Track status</b>
+
+                <p>
+                  Use a case code to view updates and send a
+                  follow-up message.
+                </p>
+
+                <i>Check a case →</i>
+              </button>
+
+              <button
+                class="action-card"
+                type="button"
+                id="showHelpBtn"
+              >
+                <span class="action-icon gold">?</span>
+                <small>Guidance</small>
+                <b>How this works</b>
+
+                <p>
+                  Understand what the portal saves and what
+                  happens next.
+                </p>
+
+                <i>Read guidance →</i>
+              </button>
+            </div>
+
+            <div class="privacy-card">
+              <div class="privacy-lock">◇</div>
+
+              <div>
+                <b>Your privacy in this portal</b>
+
+                <p>
+                  No information is sent to a server. Cases remain
+                  only in this browser's local storage.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONCERN FORM -->
+
+          <div
+            class="student-panel is-hidden"
+            id="reportPanel"
+          >
+            <div class="panel-topline">
+              <button
+                class="back-link dark"
+                type="button"
+                data-student-home
+              >
+                ← Student portal
+              </button>
+
+              <span>New concern</span>
+            </div>
+
+            <div class="form-layout">
+              <aside class="form-aside">
+                <span class="section-kicker">
+                  Private submission
+                </span>
+
+                <h2>Tell us what happened.</h2>
+
+                <p>
+                  Share only the details needed for the concern
+                  to be understood.
+                </p>
+
+                <div class="form-steps">
+                  <div class="active">
+                    <b>1</b>
+                    <span>Concern details</span>
+                  </div>
+
+                  <div>
+                    <b>2</b>
+                    <span>Review & submit</span>
+                  </div>
+
+                  <div>
+                    <b>3</b>
+                    <span>Case code</span>
+                  </div>
+                </div>
+              </aside>
+
+              <form
+                class="concern-form"
+                id="concernForm"
+                novalidate
+              >
+                <div class="privacy-warning">
+                  <b>Privacy reminder:</b>
+                  Avoid adding phone numbers, home addresses or
+                  unnecessary sensitive information.
+                </div>
+
+                <div class="field-group">
+                  <label for="category">
+                    Type of concern
+                    <span>*</span>
+                  </label>
+
+                  <select id="category" required>
+                    <option value="">
+                      Select a category
+                    </option>
+
+                    <option>
+                      Bullying or intimidation
+                    </option>
+
+                    <option>
+                      Unwanted contact
+                    </option>
+
+                    <option>
+                      Cyber harassment
+                    </option>
+
+                    <option>
+                      Discrimination
+                    </option>
+
+                    <option>
+                      Safety concern
+                    </option>
+
+                    <option>
+                      Other concern
+                    </option>
+                  </select>
+
+                  <small
+                    class="field-error"
+                    data-error="category"
+                  ></small>
+                </div>
+
+                <div class="two-fields">
+                  <div class="field-group">
+                    <label for="incidentDate">
+                      Approximate date
+                    </label>
+
+                    <input
+                      id="incidentDate"
+                      type="date"
+                    />
+                  </div>
+
+                  <div class="field-group">
+                    <label for="place">
+                      Location or context
+                    </label>
+
+                    <input
+                      id="place"
+                      type="text"
+                      maxlength="80"
+                      placeholder="Example: library corridor"
+                    />
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label for="details">
+                    Explain the concern
+                    <span>*</span>
+                  </label>
+
+                  <textarea
+                    id="details"
+                    rows="7"
+                    maxlength="800"
+                    required
+                    placeholder="Describe what happened, when it happened and what support may be helpful."
+                  ></textarea>
+
+                  <div class="field-meta">
+                    <small
+                      class="field-error"
+                      data-error="details"
+                    ></small>
+
+                    <span id="detailsCount">
+                      0 / 800
+                    </span>
+                  </div>
+                </div>
+
+                <fieldset class="field-group radio-field">
+                  <legend>Preferred next step</legend>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="support"
+                      value="Please review this concern"
+                      checked
+                    />
+
+                    <span>
+                      Please review this concern
+                    </span>
+                  </label>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="support"
+                      value="I would like guidance"
+                    />
+
+                    <span>
+                      I would like guidance
+                    </span>
+                  </label>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="support"
+                      value="No reply needed right now"
+                    />
+
+                    <span>
+                      No reply needed right now
+                    </span>
+                  </label>
+                </fieldset>
+
+                <label class="check-row">
+                  <input
+                    type="checkbox"
+                    id="reviewConfirm"
+                  />
+
+                  <span>
+                    I confirm that I have reviewed the
+                    information before submitting.
+                  </span>
+                </label>
+
+                <small
+                  class="field-error"
+                  data-error="reviewConfirm"
+                ></small>
+
+                <div class="form-actions">
+                  <button
+                    class="btn btn-light"
+                    type="button"
+                    data-student-home
+                  >
+                    Cancel
+                  </button>
+
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                  >
+                    Review and submit
+                    <span>→</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- SUBMISSION SUCCESS -->
+
+          <div
+            class="student-panel is-hidden"
+            id="successPanel"
+          >
+            <div class="success-card">
+              <div class="success-check">✓</div>
+
+              <span class="section-kicker">
+                Concern submitted
+              </span>
+
+              <h2>Your case code is ready.</h2>
+
+              <p>
+                Save this code to check the status and continue
+                the private conversation.
+              </p>
+
+              <div class="case-code-box">
+                <span id="newCaseCode">
+                  SS-26-XXXXXX
+                </span>
+
+                <button
+                  type="button"
+                  id="copyCodeBtn"
+                >
+                  Copy code
+                </button>
+              </div>
+
+              <div class="success-next">
+                <b>What happens next?</b>
+
+                <div>
+                  <span>1</span>
+                  The case appears in the faculty dashboard.
+                </div>
+
+                <div>
+                  <span>2</span>
+                  Faculty can update its status and reply.
+                </div>
+
+                <div>
+                  <span>3</span>
+                  Use the code to see those updates here.
+                </div>
+              </div>
+
+              <div class="success-actions">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="viewNewCaseBtn"
+                >
+                  View case status
+                </button>
+
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-student-home
+                >
+                  Return to portal
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRACK CASE -->
+
+          <div
+            class="student-panel is-hidden"
+            id="trackPanel"
+          >
+            <div class="track-card">
+              <button
+                class="back-link dark"
+                type="button"
+                data-student-home
+              >
+                ← Student portal
+              </button>
+
+              <div class="track-icon">⌕</div>
+
+              <span class="section-kicker">
+                Private follow-up
+              </span>
+
+              <h2>Track your case</h2>
+
+              <p>
+                Enter the case code received after submission.
+                You may also use the starter code below.
+              </p>
+
+              <form id="trackForm">
+                <label for="trackCode">
+                  Case code
+                </label>
+
+                <div class="track-input">
+                  <input
+                    id="trackCode"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="SS-26-XXXXXX"
+                    maxlength="14"
+                  />
+
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                  >
+                    Check status
+                  </button>
+                </div>
+
+                <small
+                  class="field-error"
+                  id="trackError"
+                ></small>
+              </form>
+
+              <div class="starter-code">
+                <span>Try starter code:</span>
+
+                <button
+                  type="button"
+                  data-starter-code="SS-26-B4Q8X1"
+                >
+                  SS-26-B4Q8X1
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE DETAILS -->
+
+          <div
+            class="student-panel is-hidden"
+            id="casePanel"
+          >
+            <div class="case-page">
+              <div class="case-page-head">
+                <button
+                  class="back-link dark"
+                  type="button"
+                  id="backToTrack"
+                >
+                  ← Track another case
+                </button>
+
+                <span
+                  class="status-badge"
+                  id="studentStatusBadge"
+                >
+                  New
+                </span>
+              </div>
+
+              <div class="case-summary">
+                <div>
+                  <span>Case code</span>
+                  <h2 id="studentCaseCode"></h2>
+                  <p id="studentCaseMeta"></p>
+                </div>
+
+                <div class="case-update">
+                  <span>Last updated</span>
+                  <b id="studentCaseUpdated"></b>
+                </div>
+              </div>
+
+              <div class="case-grid">
+                <div class="case-main-card">
+                  <h3>Progress</h3>
+
+                  <div
+                    class="status-timeline"
+                    id="statusTimeline"
+                  ></div>
+
+                  <div class="case-detail-block">
+                    <h3>Concern summary</h3>
+                    <dl id="studentCaseDetails"></dl>
+                  </div>
+                </div>
+
+                <div class="chat-card">
+                  <div class="chat-head">
+                    <div>
+                      <h3>Private message thread</h3>
+                      <p>Case code conversation</p>
+                    </div>
+
+                    <span class="online-dot"></span>
+                  </div>
+
+                  <div
+                    class="messages"
+                    id="studentMessages"
+                  ></div>
+
+                  <form
+                    class="chat-form"
+                    id="studentChatForm"
+                  >
+                    <label
+                      class="sr-only"
+                      for="studentChatInput"
+                    >
+                      Message
+                    </label>
+
+                    <input
+                      id="studentChatInput"
+                      maxlength="300"
+                      placeholder="Write a follow-up message..."
+                    />
+
+                    <button
+                      type="submit"
+                      aria-label="Send message"
+                    >
+                      ↑
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HELP -->
+
+          <div
+            class="student-panel is-hidden"
+            id="helpPanel"
+          >
+            <div class="help-page">
+              <button
+                class="back-link dark"
+                type="button"
+                data-student-home
+              >
+                ← Student portal
+              </button>
+
+              <span class="section-kicker">
+                Before you begin
+              </span>
+
+              <h2>How the portal works</h2>
+
+              <div class="help-grid">
+                <article>
+                  <b>1</b>
+                  <h3>Share the details</h3>
+
+                  <p>
+                    Add only the information needed for the
+                    concern to be understood.
+                  </p>
+                </article>
+
+                <article>
+                  <b>2</b>
+                  <h3>Save your case code</h3>
+
+                  <p>
+                    The random code is the way to reopen your
+                    locally stored case.
+                  </p>
+                </article>
+
+                <article>
+                  <b>3</b>
+                  <h3>Check faculty updates</h3>
+
+                  <p>
+                    Use the same browser to see status changes
+                    and messages created in the faculty portal.
+                  </p>
+                </article>
+              </div>
+
+              <div class="scope-note">
+                <b>Privacy information</b>
+
+                <p>
+                  This academic frontend stores information in
+                  the current browser. An official deployment
+                  would require authentication, encrypted server
+                  storage and institutional policies.
+                </p>
+              </div>
+
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="helpStartReport"
+              >
+                I understand—start form
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACULTY DASHBOARD -->
+
+    <section
+      class="view"
+      id="view-admin"
+      aria-labelledby="adminTitle"
+    >
+      <div class="admin-app">
+        <aside class="admin-sidebar">
+          <div class="admin-brand">
+            <span class="admin-brand-mark">SS</span>
+
+            <div>
+              <b>SheSpeaks</b>
+              <small>Faculty workspace</small>
+            </div>
+          </div>
+
+          <nav
+            class="admin-nav"
+            aria-label="Faculty dashboard sections"
+          >
+            <button
+              class="active"
+              type="button"
+              data-admin-section="overview"
+            >
+              <span>▦</span>
+              Overview
+            </button>
+
+            <button
+              type="button"
+              data-admin-section="open"
+            >
+              <span>○</span>
+              Open concerns
+
+              <i id="openNavCount">0</i>
+            </button>
+
+            <button
+              type="button"
+              data-admin-section="resolved"
+            >
+              <span>✓</span>
+              Resolved
+            </button>
+
+            <button
+              type="button"
+              data-admin-section="messages"
+            >
+              <span>◫</span>
+              Messages
+
+              <i id="messageNavCount">0</i>
+            </button>
+          </nav>
+
+          <div class="sidebar-note">
+            <span>Academic project</span>
+
+            <p>
+              All records are stored only in this browser.
+            </p>
+          </div>
+
+          <button
+            class="sidebar-link"
+            type="button"
+            data-route="home"
+          >
+            ↗ Public website
+          </button>
+
+          <button
+            class="sidebar-link"
+            type="button"
+            id="resetPortalBtn"
+          >
+            ↻ Reset portal data
+          </button>
+
+          <button
+            class="sidebar-link logout"
+            type="button"
+            id="adminLogoutBtn"
+          >
+            ⇥ Sign out
+          </button>
+        </aside>
+
+        <div class="admin-main">
+          <header class="admin-topbar">
+            <div>
+              <span id="adminBreadcrumb">
+                Dashboard / Overview
+              </span>
+
+              <h1 id="adminTitle">
+                Welcome, Principal
+              </h1>
+            </div>
+
+            <div class="staff-profile">
+              <span>PR</span>
+
+              <div>
+                <b>Principal</b>
+                <small>Authorized faculty account</small>
+              </div>
+            </div>
+          </header>
+
+          <div class="admin-content">
+
+            <!-- OVERVIEW -->
+
+            <section
+              class="admin-section is-active"
+              id="admin-overview"
+            >
+              <div class="dashboard-welcome">
+                <div>
+                  <span class="section-kicker">
+                    Case overview
+                  </span>
+
+                  <h2>
+                    Student support dashboard
+                  </h2>
+
+                  <p>
+                    Review concerns, continue conversations
+                    and record progress.
+                  </p>
+                </div>
+
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-admin-section="open"
+                >
+                  Review open concerns
+                  <span>→</span>
+                </button>
+              </div>
+
+              <div
+                class="metric-grid"
+                id="metricGrid"
+              ></div>
+
+              <div class="dashboard-grid">
+                <div class="dashboard-card">
+                  <div class="card-head">
+                    <div>
+                      <h3>Recent concerns</h3>
+                      <p>Latest submissions</p>
+                    </div>
+
+                    <button
+                      type="button"
+                      data-admin-section="open"
+                    >
+                      View all
+                    </button>
+                  </div>
+
+                  <div
+                    class="case-list compact-list"
+                    id="recentCases"
+                  ></div>
+                </div>
+
+                <div class="dashboard-card">
+                  <div class="card-head">
+                    <div>
+                      <h3>Needs attention</h3>
+                      <p>Open cases with unread messages</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="attention-list"
+                    id="attentionList"
+                  ></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- OPEN CONCERNS -->
+
+            <section
+              class="admin-section"
+              id="admin-open"
+            >
+              <div class="admin-section-head">
+                <div>
+                  <span class="section-kicker">
+                    Case queue
+                  </span>
+
+                  <h2>Open concerns</h2>
+
+                  <p>
+                    New and under-review cases.
+                  </p>
+                </div>
+
+                <div class="list-tools">
+                  <label>
+                    <span class="sr-only">
+                      Search concerns
+                    </span>
+
+                    <input
+                      id="caseSearch"
+                      type="search"
+                      placeholder="Search code or category"
+                    />
+                  </label>
+
+                  <select
+                    id="statusFilter"
+                    aria-label="Filter by status"
+                  >
+                    <option value="all">
+                      All open
+                    </option>
+
+                    <option value="New">
+                      New
+                    </option>
+
+                    <option value="Under Review">
+                      Under review
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="case-list full-list"
+                id="openCasesList"
+              ></div>
+            </section>
+
+            <!-- RESOLVED CONCERNS -->
+
+            <section
+              class="admin-section"
+              id="admin-resolved"
+            >
+              <div class="admin-section-head">
+                <div>
+                  <span class="section-kicker">
+                    Completed queue
+                  </span>
+
+                  <h2>Resolved concerns</h2>
+
+                  <p>
+                    Cases marked complete by the faculty reviewer.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="case-list full-list"
+                id="resolvedCasesList"
+              ></div>
+            </section>
+
+            <!-- MESSAGES -->
+
+            <section
+              class="admin-section"
+              id="admin-messages"
+            >
+              <div class="admin-section-head">
+                <div>
+                  <span class="section-kicker">
+                    Conversations
+                  </span>
+
+                  <h2>Case messages</h2>
+
+                  <p>
+                    Select a case to continue its private
+                    message thread.
+                  </p>
+                </div>
+              </div>
+
+              <div class="message-inbox">
+                <div
+                  class="message-cases"
+                  id="messageCaseList"
+                ></div>
+
+                <div
+                  class="message-preview"
+                  id="messagePreview"
+                >
+                  <div class="empty-state">
+                    <span>◫</span>
+
+                    <h3>Select a conversation</h3>
+
+                    <p>
+                      Choose a case from the left to view
+                      its messages.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CASE DETAILS DRAWER -->
+
+  <div
+    class="drawer-backdrop"
+    id="drawerBackdrop"
+    hidden
+  ></div>
+
+  <aside
+    class="case-drawer"
+    id="caseDrawer"
+    aria-label="Concern details"
+    aria-hidden="true"
+  >
+    <div class="drawer-head">
+      <div>
+        <span>Concern details</span>
+        <h2 id="drawerCode"></h2>
+      </div>
+
+      <button
+        type="button"
+        id="closeDrawer"
+        aria-label="Close details"
+      >
+        ×
+      </button>
+    </div>
+
+    <div
+      class="drawer-body"
+      id="drawerBody"
+    ></div>
+  </aside>
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
